@@ -11,6 +11,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Topics/Generic methods/Check for null" />
+            <option value="$PROJECT_DIR$/Topics/Generic methods/Generic methods" />
+            <option value="$PROJECT_DIR$/Topics/Generic methods/Invert an array" />
+            <option value="$PROJECT_DIR$/Topics/Generic methods/Print content" />
+            <option value="$PROJECT_DIR$/Topics/Generic methods/The first element" />
             <option value="$PROJECT_DIR$/Topics/Regexes in programs/Card name validation and identification" />
             <option value="$PROJECT_DIR$/Topics/Regexes in programs/Regexes in programs" />
             <option value="$PROJECT_DIR$/Topics/Regexes in programs/Vehicle registration number" />

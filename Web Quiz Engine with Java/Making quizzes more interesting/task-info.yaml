@@ -40,6 +40,7 @@ files:
     visible: true
     learner_created: false
   - name: test/tests/WebQuizEngineTest.java
+    visible: true
     learner_created: false
   - name: src/engine/model/dto/request/CheckQuizRequest.java
     visible: true
