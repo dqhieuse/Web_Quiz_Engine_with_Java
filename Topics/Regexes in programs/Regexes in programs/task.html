@@ -1,0 +1,25 @@
+<div class="step-text">
+<p><a class="theory-lookup not-relevant" href="/learn/step/3696" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a regular expression (regex) is a sequence of characters that specifies a set of strings and is used to search, edit, and manipulate text. | Java has built-in support for regular expressions, with the String class having a special method called matches() that takes a regular expression pattern as an argument and checks whether the string matches this pattern. Regular expressions are a powerful tool for processing strings in Java, as they allow you to define common patterns using regular characters and special characters, and then check whether strings match these patterns.">Regular expressions</a> have a very wide scope of application. They're used in text editors and in implementations of programming languages, for parsing and <a class="theory-lookup not-relevant" href="/learn/step/3696" rel="noopener noreferrer nofollow" target="_blank" title="In Java, syntax refers to a set of rules that define how a program needs to be written in order to be valid. | It includes the order of components, such as statements written from top to bottom in a sequential manner, and the use of specific symbols, such as semicolons to terminate a statement. Java has its own specific syntax, which includes the use of keywords, identifiers, literals, operators, and separators. These tokens must adhere to the specific rules of the Java syntax and are separated by whitespace.">syntax</a> highlighting, for extraction of useful information from files and web sites. In this lesson, we would like to show you an example of a simple yet powerful program using a regular expression for string processing.</p><h5 id="program-with-a-regular-expression">Program with a regular expression</h5><p>Let's consider a program that checks whether the string logins, separated by commas or whitespace, are valid. We want to split them into separate pieces, check each one, and save only the valid logins.</p><p>A valid login follows these rules:</p><ol><li><p>It can contain any Latin letter (uppercase or lowercase), digit, underscore (<code class="language-java">_</code>), or dollar sign (<code class="language-java">$</code>).</p></li><li><p>Its length must be at least 5 characters and at most 12 characters.</p></li></ol><p>Here is an example of the implementation:</p><pre><code class="language-java">class CheckLoginProblem {
+    public static void main(String[] args) {
+        String stringOfLogins = "admin, user, 123, user_123, $sign abc goodLogin";
+
+        /* Split the line of logins by commas or whitespace */
+        String[] potentialLogins = stringOfLogins.split("[,\\s]+");
+
+        /* A pattern for valid logins */
+        String loginRegex = "[a-zA-Z0-9_$]{5,12}";
+
+        /* A list to store only valid logins */
+        List&lt;String&gt; validLogins = new ArrayList&lt;&gt;();
+
+        for (String login : potentialLogins) {
+            /* Check each login against the regular expression */
+            if (login.matches(loginRegex)) {
+                validLogins.add(login);
+            }
+        }
+
+        System.out.println(validLogins);
+    }
+}</code></pre><p>Remember, the regex <code class="language-java">"\\s+"</code> is a very useful practical tool for finding whitespace characters. It's preferable to use this shorthand instead of directly typing <code class="language-java">" "</code>.</p><p>Let's run our program and check the result. The output is:</p><pre><code class="language-java">[admin, user_123, $sign, goodLogin]</code></pre><p>As you can see, by using a simple regular expression we can write a quite powerful program for a real-life problem. If you wish, you can rewrite this regex using other special characters.</p><h5 id="conclusion">Conclusion</h5><p>In this lesson, we've seen a small example of how regular expressions can help us in string processing. <br/>We’ve combined our knowledge of using the <code class="language-java">matches()</code> method with the power of <code class="language-java">split()</code> to handle multiple inputs in a single line. Regular expressions help specify exactly what a valid login looks like, and the <code class="language-java">split()</code> method allows us to isolate each potential login. You can adapt this approach to more complex scenarios, experimenting with different delimiters or stricter requirements for valid logins.</p>
+</div>
