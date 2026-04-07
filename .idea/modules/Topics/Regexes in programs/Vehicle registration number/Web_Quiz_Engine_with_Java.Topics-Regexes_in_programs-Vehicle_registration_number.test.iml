@@ -5,7 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Regexes in programs/Vehicle registration number/src/test" />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Regexes in programs/Vehicle registration number/test" />
-    <orderEntry type="jdk" jdkName="temurin-21" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.Topics-Regexes_in_programs-Vehicle_registration_number.main" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.util.main" />

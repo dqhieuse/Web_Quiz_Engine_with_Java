@@ -5,11 +5,5 @@ import java.util.Scanner;
 import java.util.function.Function;
 
 class ArrayUtils {
-    public static <T> T getFirst(T[] array) {
-        if (array.length == 0) {
-            return null;
-        } else {
-            return array[0];
-        }
-    }
+    // define getFirst method here
 }

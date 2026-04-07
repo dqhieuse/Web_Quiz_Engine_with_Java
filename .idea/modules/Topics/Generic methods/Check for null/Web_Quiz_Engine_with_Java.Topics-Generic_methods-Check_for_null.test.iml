@@ -5,7 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Generic methods/Check for null/src/test" />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Generic methods/Check for null/test" />
-    <orderEntry type="jdk" jdkName="temurin-21" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.Topics-Generic_methods-Check_for_null.main" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.util.main" />

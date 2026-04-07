@@ -1,7 +1,6 @@
 server:
   servlet:
     context-path: /api
-  port: 8080
 management:
   endpoints:
     web:

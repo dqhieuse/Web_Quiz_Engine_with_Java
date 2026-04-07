@@ -19,7 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../../Web Quiz Engine with Java/task/src/generated" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../Web Quiz Engine with Java/task/src/resources" type="java-resource" />
     </content>
-    <orderEntry type="jdk" jdkName="temurin-21" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.44" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-actuator:3.2.0" level="project" />

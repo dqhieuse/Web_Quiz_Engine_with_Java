@@ -4,7 +4,7 @@
     <output url="file://$MODULE_DIR$/../../../../../../../../../Web Quiz Engine with Java/task/build/generated/sources/headers/java/out/production/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../../../../../Web Quiz Engine with Java/task/build/generated/sources/headers/java/src" />
-    <orderEntry type="jdk" jdkName="temurin-21" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

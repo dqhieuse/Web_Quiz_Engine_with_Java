@@ -12,7 +12,7 @@
         <module name="Web_Quiz_Engine_with_Java.Web_Quiz_Engine_with_Java-task.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="21" />
+    <bytecodeTargetLevel target="23" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

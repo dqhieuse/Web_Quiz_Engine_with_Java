@@ -7,7 +7,7 @@
     <content url="file://$MODULE_DIR$/../../../../../Web Quiz Engine with Java/task/out/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../../../Web Quiz Engine with Java/task/out/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="temurin-21" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.Web_Quiz_Engine_with_Java-task-out.main" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.util.main" />

@@ -1,7 +1,6 @@
 package engine.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -13,10 +12,11 @@ import java.util.List;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Quiz {
-    Integer id;
+    @JsonIgnore
+    String id;
     String title;
     String text;
     List<String> options;
     @JsonIgnore
-    List<Integer> answer;
+    int correctAns;
 }

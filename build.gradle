@@ -4,8 +4,8 @@ subprojects {
     apply plugin: 'application'
     apply plugin: 'java'
 
-    def userJava = 21
-    def hsJava = 21
+    def userJava = Integer.parseInt(JavaVersion.current().getMajorVersion())
+    def hsJava = Integer.parseInt(hs.java.version)
     def testJava = Math.max(userJava, hsJava)
 
     java.toolchain.languageVersion = JavaLanguageVersion.of(testJava)
