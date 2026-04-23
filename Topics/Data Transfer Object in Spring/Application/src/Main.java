@@ -1,0 +1,3 @@
+class AuthorStatsDTO {
+    //your implementation
+}

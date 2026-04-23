@@ -5,13 +5,34 @@ files:
     learner_created: false
   - name: src/resources/application.properties
     visible: true
-    learner_created: false
+    learner_created: true
   - name: build.gradle
     visible: true
     learner_created: false
   - name: test/tests/WebQuizEngineTest.java
     visible: true
     learner_created: false
+  - name: src/engine/model/Author.java
+    visible: true
+    learner_created: true
+  - name: src/engine/model/dto/AuthorAdapter.java
+    visible: true
+    learner_created: true
+  - name: src/engine/model/dto/request/RegisterRequest.java
+    visible: true
+    learner_created: true
+  - name: src/engine/controller/AuthController.java
+    visible: true
+    learner_created: true
+  - name: src/engine/service/AuthService.java
+    visible: true
+    learner_created: true
+  - name: src/engine/repository/AuthorRepository.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/91/stages/508/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 23 Apr 2026 12:03:03 UTC"
 record: -1

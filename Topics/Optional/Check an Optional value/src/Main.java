@@ -3,8 +3,7 @@ import java.util.Optional;
 class Main {
     public static void main(String[] args) {
         ValueProvider provider = new ValueProvider();
-        Optional<String> value = provider.getValue();
-        value.ifPresent(System.out::println);
+        // use provider.getValue() to get Optional<String>
     }
 }
 

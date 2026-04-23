@@ -1,5 +1,4 @@
 import java.util.Optional;
-import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
@@ -15,13 +14,6 @@ class Main {
 
 class InputStringReader {
     public Optional<String> getValue() {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        if ("empty".equals(input)) {
-            return Optional.empty();
-        } else {
-            return Optional.of(input);
-        }
-
+        // implement
     }
 }

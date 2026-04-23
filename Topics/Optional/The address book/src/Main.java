@@ -11,11 +11,7 @@ public class Main {
         String name = scanner.nextLine();
         Optional<String> optAddress = AddressBook.getAddressByName(name);
 
-        if (optAddress.isPresent()) {
-            System.out.println(name + " lives at " + optAddress.get());
-        } else {
-            System.out.println("Unknown");
-        }
+        // write your code here
     }
 }
 

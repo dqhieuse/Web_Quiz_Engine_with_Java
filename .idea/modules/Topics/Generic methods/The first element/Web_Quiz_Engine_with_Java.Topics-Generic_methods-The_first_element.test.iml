@@ -5,7 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Generic methods/The first element/src/test" />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Generic methods/The first element/test" />
-    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.Topics-Generic_methods-The_first_element.main" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.util.main" />

@@ -4,12 +4,7 @@ import java.util.Optional;
 class Main {
     public static void main(String[] args) {
         ValueProvider provider = new ValueProvider();
-        List<Optional<Integer>> values = provider.getValues();
-        Integer sum = 0;
-        for (Optional<Integer> value : values) {
-            sum += value.orElse(0);
-        }
-        System.out.println(sum);
+        // use provider.getValues() to get List<Optional<Integer>>
     }
 }
 

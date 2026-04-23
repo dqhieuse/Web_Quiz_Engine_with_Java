@@ -1,0 +1,19 @@
+<div class="step-text">
+<p></p><p>You have the following <code class="language-java">User</code> and  <code class="language-java">Blog</code> classes in your application:</p><pre><code class="language-java">class User {
+    private long id;
+    private String name;
+    private String password;
+    private List&lt;Blog&gt; blogs;
+
+    //constructors, getters, and setters
+}
+
+class Blog {
+    private long id;
+    private String name;
+    private User author;
+    private String content;
+
+    //constructors, getters, and setters
+}</code></pre><p>Create the <code class="language-java">AuthorStatsDTO</code>  for sending the main information about the author to the client. It should contain the <code class="language-java">id</code>, the <code class="language-java">name</code> of the author, and the <code class="language-java">blogsNumber</code> which contains the number of created blogs by the author as an integer. Implement the <code class="language-java">AuthorStatsDTO</code> as a POJO class. Your DTO must have the constructor which receives an instance of the <code class="language-java">User</code> class as an argument, and it also must have getters and setters for all its fields. Note that your class can't be <code class="language-java">public</code> in this task due to the testing platform specifics. The methods, however, must have a <code class="language-java">public</code> modifier.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">No input.</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Good job!</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>
+</div>

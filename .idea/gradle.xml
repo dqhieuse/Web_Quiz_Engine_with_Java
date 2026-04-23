@@ -11,6 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Topics/Data Transfer Object in Spring/Application" />
+            <option value="$PROJECT_DIR$/Topics/Data Transfer Object in Spring/Converting a Java class to a DTO implementation" />
+            <option value="$PROJECT_DIR$/Topics/Data Transfer Object in Spring/Data Transfer Object in Spring" />
             <option value="$PROJECT_DIR$/Topics/Generic methods/Check for null" />
             <option value="$PROJECT_DIR$/Topics/Generic methods/Generic methods" />
             <option value="$PROJECT_DIR$/Topics/Generic methods/Invert an array" />

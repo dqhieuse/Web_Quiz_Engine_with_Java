@@ -5,7 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Regexes in programs/Regexes in programs/src/test" />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Regexes in programs/Regexes in programs/test" />
-    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.Topics-Regexes_in_programs-Regexes_in_programs.main" />
     <orderEntry type="module" module-name="Web_Quiz_Engine_with_Java.util.main" />

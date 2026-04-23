@@ -7,7 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Optional/Sum up optional values/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Optional/Sum up optional values/out" />
     </content>
-    <orderEntry type="jdk" jdkName="openjdk-23" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -1,6 +1,7 @@
 package engine.model.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -14,15 +15,17 @@ import java.util.List;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CreateQuizRequest {
-    @NotBlank
+    @NotNull
+    @NotEmpty
     String title;
 
-    @NotBlank
+    @NotNull
+    @NotEmpty
     String text;
 
     @Size(min = 2)
+    @NotNull
     List<String> options;
 
-    @NotNull
-    int answer;
+    List<Integer> answer;
 }
