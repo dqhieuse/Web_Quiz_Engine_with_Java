@@ -26,3 +26,6 @@ spring:
       settings:
         trace: false
         web-allow-others: false
+
+server:
+  port: 8889
