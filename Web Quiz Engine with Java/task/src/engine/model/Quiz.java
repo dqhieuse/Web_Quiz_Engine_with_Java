@@ -36,4 +36,8 @@ public class Quiz {
     @JoinColumn(name = "author_email")
     Author author;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "quiz")
+    List<CompleteHistory> completeHistories;
+
 }

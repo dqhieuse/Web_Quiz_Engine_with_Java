@@ -10,6 +10,8 @@ import engine.model.dto.request.CreateQuizRequest;
 import engine.model.dto.response.AnswerResponse;
 import engine.repository.QuizRepository;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -82,5 +84,9 @@ public class QuizService {
         }
 
         quizRepository.delete(quiz);
+    }
+
+    public Page<Quiz> getAllQuizzes(Pageable pageable) {
+        return quizRepository.findAll(pageable);
     }
 }
