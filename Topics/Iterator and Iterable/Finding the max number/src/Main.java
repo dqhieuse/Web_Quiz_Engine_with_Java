@@ -4,13 +4,7 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static int findMaxByIterator(Iterator<Integer> iterator) {
-        Integer max = iterator.next();
-
-        while (iterator.hasNext()) {
-            max = Math.max(max, iterator.next());
-        }
-
-        return max;
+        // write your code here
     }
 
     /* Do not change code below */

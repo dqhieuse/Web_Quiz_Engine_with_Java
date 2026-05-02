@@ -4,11 +4,7 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void removeElementsGreaterThanValue(Iterator<Long> iterator, Long val) {
-        while (iterator.hasNext()) {
-            if (iterator.next() > val) {
-                iterator.remove();
-            }
-        }
+        // write your code here
     }
 
     /* Do not change code below */

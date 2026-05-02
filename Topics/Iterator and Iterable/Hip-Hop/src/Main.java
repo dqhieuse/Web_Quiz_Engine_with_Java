@@ -4,16 +4,11 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void iterateOverList(ListIterator<String> iter) {
-        String strAdded = "Hop";
-        while (iter.hasNext()) {
-            if (iter.next().equals("Hip")) {
-                iter.add(strAdded);
-            }
-        }
+        // write your code here
     }
 
     public static void printList(ListIterator<String> iter) {
-        iter.forEachRemaining(System.out::println);
+        // write your code here
     }
 
     /* Do not change code below */

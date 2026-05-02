@@ -6,9 +6,7 @@ public class Main {
     public static <T> List<T> createReversedListByIterator(ListIterator<T> iterator) {
         List<T> list = new ArrayList<>();
 
-        while (iterator.hasNext()) {
-            list.addFirst(iterator.next());
-        }
+        // write your code here
 
         return list;
     }
