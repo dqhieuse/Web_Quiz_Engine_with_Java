@@ -11,6 +11,7 @@ import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,8 +39,8 @@ class QuizController {
     }
 
     @PostMapping("/{id}/solve")
-    public ResponseEntity<AnswerResponse> checkAnswer(@PathVariable Long id, @RequestBody @Valid CheckQuizRequest request) {
-        return new ResponseEntity<>(quizService.checkAnswer(id, request), HttpStatus.OK);
+    public ResponseEntity<AnswerResponse> checkAnswer(@PathVariable Long id, @RequestBody @Valid CheckQuizRequest request, @AuthenticationPrincipal UserDetails user) {
+        return new ResponseEntity<>(quizService.checkAnswer(id, request, user), HttpStatus.OK);
     }
 
     @PostMapping
@@ -61,7 +62,7 @@ class QuizController {
 
     @GetMapping("/completed")
     public ResponseEntity<Page<CompletedTaskResponse>> getCompletedQuizzes(@Param("page") Integer page, @AuthenticationPrincipal UserDetails user) {
-        Pageable pageable = PageRequest.of(page, 10);
+        Pageable pageable = PageRequest.of(page, 10, Sort.by(Sort.Direction.DESC, "completedAt"));
         return new ResponseEntity<>(completeHistoryService.getAllCompleteHistoryOfCurrentUser(user, pageable), HttpStatus.OK);
     }
 }

@@ -37,7 +37,7 @@ public class Quiz {
     Author author;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "quiz")
+    @OneToMany(mappedBy = "quiz", orphanRemoval = true, cascade = CascadeType.ALL)
     List<CompleteHistory> completeHistories;
 
 }

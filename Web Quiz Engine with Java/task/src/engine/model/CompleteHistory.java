@@ -22,11 +22,9 @@ public class CompleteHistory {
     Long h_id;
 
     @ManyToOne
-    @JoinColumn(name = "id")
     Quiz quiz;
 
     @ManyToOne
-    @JoinColumn(name = "email")
     @JsonIgnore
     Author author;
 
