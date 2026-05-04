@@ -36,4 +36,8 @@ public class Quiz {
     @JoinColumn(name = "author_email")
     Author author;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "quiz", orphanRemoval = true, cascade = CascadeType.ALL)
+    List<CompleteHistory> completeHistories;
+
 }

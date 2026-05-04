@@ -1,21 +1,22 @@
 package engine.service;
 
-import engine.WebQuizEngine;
-import engine.exception.IndexOutOfBoundsException;
 import engine.exception.NotFoundException;
 import engine.model.Author;
+import engine.model.CompleteHistory;
 import engine.model.Quiz;
 import engine.model.dto.request.CheckQuizRequest;
 import engine.model.dto.request.CreateQuizRequest;
 import engine.model.dto.response.AnswerResponse;
+import engine.repository.CompleteHistoryRepository;
 import engine.repository.QuizRepository;
 import org.springframework.beans.BeanUtils;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,9 +24,11 @@ import java.util.List;
 public class QuizService {
 
     private final QuizRepository quizRepository;
+    private final CompleteHistoryRepository completeHistoryRepository;
 
-    public QuizService(QuizRepository quizRepository) {
+    public QuizService(QuizRepository quizRepository, CompleteHistoryRepository completeHistoryRepository) {
         this.quizRepository = quizRepository;
+        this.completeHistoryRepository = completeHistoryRepository;
     }
 
     public List<Quiz> getAllQuizzes() {
@@ -55,23 +58,27 @@ public class QuizService {
                 .orElseThrow(() -> new NotFoundException("Quiz with id " + id + " not found"));
     }
 
-    public AnswerResponse checkAnswer(Long id, CheckQuizRequest request) {
+    public AnswerResponse checkAnswer(Long id, CheckQuizRequest request, UserDetails user) {
         Quiz quiz = getQuiz(id);
 
-        if (quiz.getAnswer().isEmpty() && request.getAnswer().isEmpty()) {
+        boolean isCorrect = false;
+
+        if (quiz.getAnswer() == null || quiz.getAnswer().isEmpty()) {
+             isCorrect = request.getAnswer() == null || request.getAnswer().isEmpty();
+        } else if (request.getAnswer() != null && quiz.getAnswer().size() == request.getAnswer().size()) {
+            isCorrect = quiz.getAnswer().containsAll(request.getAnswer());
+        }
+
+        if (isCorrect) {
+            CompleteHistory history = new CompleteHistory();
+            history.setQuiz(quiz);
+            history.setAuthor(Author.builder().email(user.getUsername()).build());
+            history.setCompletedAt(LocalDateTime.now());
+            completeHistoryRepository.save(history);
             return AnswerResponse.correct();
         }
 
-        if (quiz.getAnswer().size() != request.getAnswer().size()) {
-            return AnswerResponse.wrong();
-        }
-
-        for (Integer answer : request.getAnswer()) {
-            if (!quiz.getAnswer().contains(answer)) {
-                return AnswerResponse.wrong();
-            }
-        }
-        return AnswerResponse.correct();
+        return AnswerResponse.wrong();
     }
 
     public void deleteQuiz(Long id, UserDetails user) {
@@ -82,5 +89,9 @@ public class QuizService {
         }
 
         quizRepository.delete(quiz);
+    }
+
+    public Page<Quiz> getAllQuizzes(Pageable pageable) {
+        return quizRepository.findAll(pageable);
     }
 }
